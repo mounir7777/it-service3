@@ -147,22 +147,6 @@
   </footer>
 
   <script src="./script.js"></script>
-applypatch <<'PATCH'
-*** Begin Patch
-*** Update File: api/public/success.html
-@@
--  <main class="section">
-+  <main class="section">
-     <div class="container">
--      <h1>Danke! 🎉</h1>
--      <p>Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns so schnell wie möglich.</p>
--      <p><a class="btn" href="/">Zurück zur Startseite</a></p>
-+      <h1 data-i18n="success.title">Danke! 🎉</h1>
-+      <p data-i18n="success.text">Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns so schnell wie möglich.</p>
-+      <p><a class="btn" href="/" data-i18n="success.back">Zurück zur Startseite</a></p>
-       <p class="form-msg ok">Automatische Weiterleitung in ein paar Sekunden…</p>
-     </div>
-   </main>
-+  <script src="./script.js"></script>
+
 </body>
 </html>
