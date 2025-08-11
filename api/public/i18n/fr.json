@@ -1,6 +1,6 @@
 {
   "nav.services": "Services",
-  "nav.pricing": "Tarifs",
+  "nav.gallery": "Galerie",
   "nav.faq": "FAQ",
   "nav.contact": "Contact",
 
@@ -23,17 +23,11 @@
   "services.monitoring": "Supervision",
   "services.monitoring.text": "Contrôles simples, sauvegardes à l’œil, alertes précoces.",
 
-  "pricing.title": "Tarifs – équitables & transparents",
-  "pricing.basic": "Basic",
-  "pricing.basic.items": "Support à distance;Mise en place périphériques;E-mail/Office",
-  "pricing.business": "Business",
-  "pricing.business.items": "Service sur site;Contrôles de sécurité;Réponse prioritaire",
-  "pricing.project": "Projet",
-  "pricing.project.items": "Forfaits;Déploiements;Formation",
-  "pricing.note": "Tous les prix hors TVA. Devis sur demande.",
-  "pricing.basic.price": "49€ /h",
-  "pricing.business.price": "79€ /h",
-  "pricing.project.price": "à partir de 299€",
+  "gallery.title": "Galerie",
+  "gallery.cabling": "Câblage réseau",
+  "gallery.support": "Support informatique",
+  "gallery.install": "Installation",
+  "gallery.note": "Photos d’exemple – nous travaillons avec soin et propreté.",
 
   "faq.title": "Questions fréquentes",
   "faq.q1": "Quels sont vos délais de réponse ?",

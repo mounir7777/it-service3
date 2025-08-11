@@ -1,6 +1,6 @@
 {
   "nav.services": "Leistungen",
-  "nav.pricing": "Preise",
+  "nav.gallery": "Galerie",
   "nav.faq": "FAQ",
   "nav.contact": "Kontakt",
 
@@ -23,17 +23,11 @@
   "services.monitoring": "Monitoring",
   "services.monitoring.text": "Einfache Checks, Backups im Blick, Frühwarnungen.",
 
-  "pricing.title": "Preise – fair & transparent",
-  "pricing.basic": "Basic",
-  "pricing.basic.items": "Remote-Support;Peripherie-Setup;E-Mail/Office",
-  "pricing.business": "Business",
-  "pricing.business.items": "Vor-Ort-Service;Sicherheits-Checks;Priorisierte Reaktion",
-  "pricing.project": "Projekt",
-  "pricing.project.items": "Fixpreis-Pakete;Rollouts;Schulung",
-  "pricing.note": "Alle Preise zzgl. USt. Wir erstellen gern ein Angebot.",
-  "pricing.basic.price": "49€ /h",
-  "pricing.business.price": "79€ /h",
-  "pricing.project.price": "ab 299€",
+  "gallery.title": "Galerie",
+  "gallery.cabling": "Netzwerkverkabelung",
+  "gallery.support": "IT-Support",
+  "gallery.install": "Installation",
+  "gallery.note": "Beispielfotos – wir arbeiten sorgfältig & ordentlich.",
 
   "faq.title": "Häufige Fragen",
   "faq.q1": "Welche Reaktionszeiten gibt es?",

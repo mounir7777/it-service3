@@ -1,3 +1,4 @@
+cat > api/public/script.js <<'EOF'
 (() => {
   const $ = (s, p=document) => p.querySelector(s);
   const $$ = (s, p=document) => [...p.querySelectorAll(s)];
@@ -20,28 +21,17 @@
       if (lang !== fallbackLang) return loadLang(fallbackLang);
     }
   }
-
   function t(key, def=''){ return currentDict[key] ?? def; }
 
   function applyI18n(){
-    // data-i18n -> textContent
     $$('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (key) el.textContent = t(key, el.textContent);
     });
-    // placeholder
     $$('[data-i18n-placeholder]').forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');
       if (key) el.setAttribute('placeholder', t(key, el.getAttribute('placeholder') || ''));
     });
-    // Preise-Listen aus Semikolon-Liste bauen (wenn vorhanden)
-    const pb = $('#p-basic'), pbu = t('pricing.basic.items','').split(';').filter(Boolean);
-    const pbs = $('#p-business'), pbus = t('pricing.business.items','').split(';').filter(Boolean);
-    const pp = $('#p-project'), pps = t('pricing.project.items','').split(';').filter(Boolean);
-    function fillUL(ul, arr){ if(!ul) return; ul.innerHTML = arr.map(i=>`<li>${i}</li>`).join(''); }
-    fillUL(pb, pbu); fillUL(pbs, pbus); fillUL(pp, pps);
-
-    // Formular-Meldung zurücksetzen (damit Sprache passt)
     const msgEl = $('#formMsg'); if (msgEl) { msgEl.textContent = ''; msgEl.className = 'form-msg'; }
   }
 
@@ -52,7 +42,6 @@
     loadLang(switcher.value);
     switcher.addEventListener('change', () => loadLang(switcher.value));
   } else {
-    // Seiten ohne Switcher (z.B. success.html)
     const initLang = localStorage.getItem('lang') || fallbackLang;
     loadLang(initLang);
   }
@@ -87,12 +76,7 @@
   const form = $('#contactForm');
   const msgEl = $('#formMsg');
   const tsField = $('#ts'); if (tsField) tsField.value = String(Date.now());
-
-  const setMsg = (text, ok=false) => {
-    if (!msgEl) return;
-    msgEl.textContent = text || '';
-    msgEl.className = 'form-msg ' + (ok ? 'ok' : 'err');
-  };
+  const setMsg = (text, ok=false) => { if (!msgEl) return; msgEl.textContent = text || ''; msgEl.className = 'form-msg ' + (ok ? 'ok' : 'err'); };
 
   if (form) {
     const submitBtn = form.querySelector('button[type="submit"]');
@@ -119,7 +103,6 @@
         if (res.ok && json.ok) {
           form.reset();
           if (tsField) tsField.value = String(Date.now());
-          // Redirect auf Success (wird ebenfalls übersetzt)
           window.location.href = '/success.html';
         } else {
           setMsg(json.message || t('form.err.generic','Senden fehlgeschlagen – bitte später erneut.'));
@@ -132,3 +115,5 @@
     });
   }
 })();
+EOF
+

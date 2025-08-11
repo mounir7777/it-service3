@@ -1,6 +1,6 @@
 {
   "nav.services": "Services",
-  "nav.pricing": "Pricing",
+  "nav.gallery": "Gallery",
   "nav.faq": "FAQ",
   "nav.contact": "Contact",
 
@@ -23,17 +23,11 @@
   "services.monitoring": "Monitoring",
   "services.monitoring.text": "Simple checks, backups in view, early warnings.",
 
-  "pricing.title": "Pricing – fair & transparent",
-  "pricing.basic": "Basic",
-  "pricing.basic.items": "Remote support;Periphery setup;Email/Office",
-  "pricing.business": "Business",
-  "pricing.business.items": "On-site service;Security checks;Priority response",
-  "pricing.project": "Project",
-  "pricing.project.items": "Fixed-price packages;Rollouts;Training",
-  "pricing.note": "All prices excl. VAT. We’re happy to quote.",
-  "pricing.basic.price": "€49 /h",
-  "pricing.business.price": "€79 /h",
-  "pricing.project.price": "from €299",
+  "gallery.title": "Gallery",
+  "gallery.cabling": "Network cabling",
+  "gallery.support": "IT support",
+  "gallery.install": "Installation",
+  "gallery.note": "Sample photos – we work carefully and neatly.",
 
   "faq.title": "Frequently asked questions",
   "faq.q1": "What are your response times?",
