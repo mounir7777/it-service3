@@ -26,11 +26,17 @@
       <nav class="nav">
         <button class="burger" id="burger" aria-controls="navMenu" aria-expanded="false" aria-label="Menü öffnen">☰</button>
         <ul id="navMenu" class="nav__menu">
-          <li><a href="#t1">Leistungen</a></li>
-          <li><a href="#pricing">Preise</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a class="btn btn--small" href="#contact">Kontakt</a></li>
+          <li><a data-i18n="nav.services" href="#t1">Leistungen</a></li>
+          <li><a data-i18n="nav.pricing" href="#pricing">Preise</a></li>
+          <li><a data-i18n="nav.faq" href="#faq">FAQ</a></li>
+          <li><a class="btn btn--small" data-i18n="nav.contact" href="#contact">Kontakt</a></li>
         </ul>
+        <!-- Language Switcher -->
+        <select id="langSwitcher" aria-label="Sprache wählen">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
       </nav>
     </div>
   </header>
@@ -39,11 +45,11 @@
     <section class="hero">
       <div class="container hero-wrap">
         <div class="hero-text">
-          <h1>Level-1 IT-Dienstleistungen – schnell, klar, zuverlässig.</h1>
-          <p>Wir unterstützen KMU bei Installation, Support und Beratung – auf Deutsch, Englisch und Französisch.</p>
+          <h1 data-i18n="hero.title">Level-1 IT-Dienstleistungen – schnell, klar, zuverlässig.</h1>
+          <p data-i18n="hero.text">Wir unterstützen KMU bei Installation, Support und Beratung – auf Deutsch, Englisch und Französisch.</p>
           <div class="hero-cta">
-            <a class="btn" href="#contact">Jetzt anfragen</a>
-            <a class="btn btn--ghost" href="#t1">Leistungen ansehen</a>
+            <a class="btn" data-i18n="hero.cta1" href="#contact">Jetzt anfragen</a>
+            <a class="btn btn--ghost" data-i18n="hero.cta2" href="#t1">Leistungen ansehen</a>
           </div>
         </div>
         <div class="hero-card">
@@ -59,74 +65,72 @@
 
     <section id="t1" class="section">
       <div class="container">
-        <h2>Unsere Leistungen</h2>
+        <h2 data-i18n="services.title">Unsere Leistungen</h2>
         <div class="grid three">
-          <article class="card"><h3>Installation</h3><p>LAN/WLAN, Treiber, Freigaben, Tests. Arbeitsplatz-Rollout.</p></article>
-          <article class="card"><h3>Helpdesk</h3><p>Windows, macOS, Linux. Office & E-Mail. Benutzerverwaltung.</p></article>
-          <article class="card"><h3>Beratung</h3><p>Grundschutz, Patches, Passwort-Richtlinien, MFA/2FA.</p></article>
-          <article class="card"><h3>Vor-Ort</h3><p>Inbetriebnahme, Hardware-Tausch, Fehleranalyse.</p></article>
-          <article class="card"><h3>Schulung</h3><p>Onboarding, M365-Basics, Security-Awareness kurz & knackig.</p></article>
-          <article class="card"><h3>Monitoring</h3><p>Einfache Checks, Backups im Blick, Frühwarnungen.</p></article>
+          <article class="card"><h3 data-i18n="services.installation">Installation</h3><p data-i18n="services.installation.text">LAN/WLAN, Treiber, Freigaben, Tests. Arbeitsplatz-Rollout.</p></article>
+          <article class="card"><h3 data-i18n="services.helpdesk">Helpdesk</h3><p data-i18n="services.helpdesk.text">Windows, macOS, Linux. Office & E-Mail. Benutzerverwaltung.</p></article>
+          <article class="card"><h3 data-i18n="services.consulting">Beratung</h3><p data-i18n="services.consulting.text">Grundschutz, Patches, Passwort-Richtlinien, MFA/2FA.</p></article>
+          <article class="card"><h3 data-i18n="services.onsite">Vor-Ort</h3><p data-i18n="services.onsite.text">Inbetriebnahme, Hardware-Tausch, Fehleranalyse.</p></article>
+          <article class="card"><h3 data-i18n="services.training">Schulung</h3><p data-i18n="services.training.text">Onboarding, M365-Basics, Security-Awareness kurz & knackig.</p></article>
+          <article class="card"><h3 data-i18n="services.monitoring">Monitoring</h3><p data-i18n="services.monitoring.text">Einfache Checks, Backups im Blick, Frühwarnungen.</p></article>
         </div>
       </div>
     </section>
 
     <section id="pricing" class="section alt">
       <div class="container">
-        <h2>Preise – fair & transparent</h2>
+        <h2 data-i18n="pricing.title">Preise – fair & transparent</h2>
         <div class="grid three">
           <article class="card pricing">
-            <h3>Basic</h3>
-            <p class="price">49€ <span>/h</span></p>
-            <ul><li>Remote-Support</li><li>Peripherie-Setup</li><li>E-Mail/Office</li></ul>
+            <h3 data-i18n="pricing.basic">Basic</h3>
+            <p class="price" data-i18n="pricing.basic.price">49€ /h</p>
+            <ul id="p-basic"></ul>
           </article>
           <article class="card pricing popular">
-            <h3>Business</h3>
-            <p class="price">79€ <span>/h</span></p>
-            <ul><li>Vor-Ort-Service</li><li>Sicherheits-Checks</li><li>Priorisierte Reaktion</li></ul>
+            <h3 data-i18n="pricing.business">Business</h3>
+            <p class="price" data-i18n="pricing.business.price">79€ /h</p>
+            <ul id="p-business"></ul>
           </article>
           <article class="card pricing">
-            <h3>Projekt</h3>
-            <p class="price">ab 299€</p>
-            <ul><li>Fixpreis-Pakete</li><li>Rollouts</li><li>Schulung</li></ul>
+            <h3 data-i18n="pricing.project">Projekt</h3>
+            <p class="price" data-i18n="pricing.project.price">ab 299€</p>
+            <ul id="p-project"></ul>
           </article>
         </div>
-        <p class="muted">Alle Preise zzgl. USt. Wir erstellen gern ein Angebot.</p>
+        <p class="muted" data-i18n="pricing.note">Alle Preise zzgl. USt. Wir erstellen gern ein Angebot.</p>
       </div>
     </section>
 
     <section id="faq" class="section">
       <div class="container">
-        <h2>Häufige Fragen</h2>
-        <details class="faq"><summary>Welche Reaktionszeiten gibt es?</summary><p>Remote meist am selben Tag, Vor-Ort nach Vereinbarung.</p></details>
-        <details class="faq"><summary>Welche Sprachen?</summary><p>Deutsch, Englisch, Französisch.</p></details>
-        <details class="faq"><summary>Arbeitet ihr mit festen Paketen?</summary><p>Ja – Basic/Business/Projekt oder individuelles Angebot.</p></details>
+        <h2 data-i18n="faq.title">Häufige Fragen</h2>
+        <details class="faq"><summary data-i18n="faq.q1">Welche Reaktionszeiten gibt es?</summary><p data-i18n="faq.a1">Remote meist am selben Tag, Vor-Ort nach Vereinbarung.</p></details>
+        <details class="faq"><summary data-i18n="faq.q2">Welche Sprachen?</summary><p data-i18n="faq.a2">Deutsch, Englisch, Französisch.</p></details>
+        <details class="faq"><summary data-i18n="faq.q3">Arbeitet ihr mit festen Paketen?</summary><p data-i18n="faq.a3">Ja – Basic/Business/Projekt oder individuelles Angebot.</p></details>
       </div>
     </section>
 
     <section id="contact" class="section alt">
       <div class="container">
-        <h2>Kontakt</h2>
+        <h2 data-i18n="contact.title">Kontakt</h2>
         <form id="contactForm" class="form" novalidate>
-          <!-- Honeypot -->
           <div class="hp-wrap" aria-hidden="true">
             <label>Homepage
               <input type="text" name="hp" tabindex="-1" autocomplete="off" />
             </label>
           </div>
-          <!-- Timestamp -->
           <input type="hidden" name="ts" id="ts" value="" />
 
-          <label> Name
-            <input type="text" name="name" placeholder="Ihr Name" required />
+          <label> <span data-i18n="contact.name">Name</span>
+            <input type="text" name="name" data-i18n-placeholder="ph.name" placeholder="Ihr Name" required />
           </label>
-          <label> E-Mail
-            <input type="email" name="email" placeholder="you@example.com" required />
+          <label> <span data-i18n="contact.email">E-Mail</span>
+            <input type="email" name="email" data-i18n-placeholder="ph.email" placeholder="you@example.com" required />
           </label>
-          <label> Nachricht
-            <textarea name="message" rows="5" placeholder="Wobei können wir helfen?" required></textarea>
+          <label> <span data-i18n="contact.message">Nachricht</span>
+            <textarea name="message" rows="5" data-i18n-placeholder="ph.message" placeholder="Wobei können wir helfen?" required></textarea>
           </label>
-          <button class="btn" type="submit">Senden</button>
+          <button class="btn" type="submit" data-i18n="contact.submit">Senden</button>
           <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -134,15 +138,31 @@
   </main>
 
   <footer class="site-footer">
-  <div class="container">
-    <p>© <span id="year"></span> IT Service3 • Berlin ·
-      <a href="/impressum.html">Impressum</a> ·
-      <a href="/datenschutz.html">Datenschutz</a>
-    </p>
-  </div>
-</footer>
-
+    <div class="container">
+      <p>© <span id="year"></span> <span data-i18n="footer.copy">IT Service3 • Berlin</span> ·
+        <a href="/impressum.html" data-i18n="footer.imprint">Impressum</a> ·
+        <a href="/datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
+      </p>
+    </div>
+  </footer>
 
   <script src="./script.js"></script>
+applypatch <<'PATCH'
+*** Begin Patch
+*** Update File: api/public/success.html
+@@
+-  <main class="section">
++  <main class="section">
+     <div class="container">
+-      <h1>Danke! 🎉</h1>
+-      <p>Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns so schnell wie möglich.</p>
+-      <p><a class="btn" href="/">Zurück zur Startseite</a></p>
++      <h1 data-i18n="success.title">Danke! 🎉</h1>
++      <p data-i18n="success.text">Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns so schnell wie möglich.</p>
++      <p><a class="btn" href="/" data-i18n="success.back">Zurück zur Startseite</a></p>
+       <p class="form-msg ok">Automatische Weiterleitung in ein paar Sekunden…</p>
+     </div>
+   </main>
++  <script src="./script.js"></script>
 </body>
 </html>
